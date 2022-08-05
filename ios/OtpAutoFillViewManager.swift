@@ -4,6 +4,10 @@ class OtpAutoFillViewManager: RCTViewManager {
     override func view() -> (OtpAutoFillView) {
         return OtpAutoFillView()
     }
+    
+    override static func requiresMainQueueSetup() -> Bool {
+        return true
+    }
 }
 
 class OtpAutoFillView : UIView, UITextFieldDelegate {
